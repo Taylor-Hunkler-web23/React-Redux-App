@@ -3,6 +3,8 @@ import {connect} from 'react-redux';
 
 const QuoteList = (props) => {
 
+    
+
     return(
         <div>
             <h1>Quotes</h1>
@@ -15,6 +17,8 @@ const QuoteList = (props) => {
 const mapStateToProps = state => {
     return{
         quotes: state.quotes,
+        loading: state.loading,
+        error: state.error
     }
 }
 
