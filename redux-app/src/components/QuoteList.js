@@ -17,11 +17,11 @@ const QuoteList = (props) => {
     }
 
     return (
-        <div>
+        <div className= "quote-parent">
             {props.error && <p>{props.error}</p>}
-            <h1>Breaking Bad Quotes</h1>
+            <h1 className="title">Breaking Bad Quotes</h1>
             {props.quotes.map(quote => (
-                <Quote quote={quote} />
+                <Quote key={quote.quote} quote={quote} />
     ))}
 
         </div>

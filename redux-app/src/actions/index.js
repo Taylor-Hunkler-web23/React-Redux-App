@@ -10,7 +10,7 @@ export const fetchQuote = () => {
 
         axios
             .get('https://breaking-bad-quotes.herokuapp.com/v1/quotes')
-            // .then(response => console.log (response))
+            // .then(response => console.log (response, "From API"))
         .then (response => dispatch({ type: FETCH_SUCCESS, payload: response.data}))
         .catch(error=> dispatch({ type: FETCH_FAILURE, payload: error.response}))
 

@@ -5,7 +5,7 @@ const Quote = props => {
 
     return(
 
-        <div>
+        <div className="quote">
             <h1>{props.quote.author} says:</h1>
             <h1>{props.quote.quote}</h1>
         </div>
