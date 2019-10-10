@@ -1,0 +1,53 @@
+.App {
+  text-align: center;
+ 
+}
+
+.App-logo {
+  height: 40vmin;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #09d3ac;
+}
+
+.quote-parent{
+height: 100vh;
+  background-image: url(https://images.unsplash.com/photo-1554372167-963fdb9fb68c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80);
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title{
+  background-color: #29773E;
+  color: rgb(241, 237, 237);
+  width: 20rem;
+  border-radius: 80px;
+  padding: 1rem;
+  margin-top: 2rem;
+
+}
+
+.quote{
+  
+  background-color: #29773E;
+  margin-top: 5rem;
+  color: rgb(241, 237, 237);
+  padding: 1rem;
+  width: 50rem;
+  border-radius: 80px
+
+}
