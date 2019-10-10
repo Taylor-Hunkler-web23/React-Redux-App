@@ -1,13 +1,28 @@
-import React from 'react'
-import {connect} from 'react-redux';
+import React, {useEffect} from 'react'
+import { connect } from 'react-redux';
+import Quote from './Quote.js'
+import {fetchQuote} from '../actions/index.js'
+
+
 
 const QuoteList = (props) => {
+    console.log(props,"p")
 
-    
+    useEffect (() => {
+        props.fetchQuote();
+    }, [])
 
-    return(
+    if (props.loading) {
+        return <h1>Loading...</h1>
+    }
+
+    return (
         <div>
-            <h1>Quotes</h1>
+            {props.error && <p>{props.error}</p>}
+            <h1>Breaking Bad Quotes</h1>
+            {props.quotes.map(quote => (
+                <Quote quote={quote} />
+    ))}
 
         </div>
     );
@@ -15,7 +30,7 @@ const QuoteList = (props) => {
 
 
 const mapStateToProps = state => {
-    return{
+    return {
         quotes: state.quotes,
         loading: state.loading,
         error: state.error
@@ -23,4 +38,4 @@ const mapStateToProps = state => {
 }
 
 
-export default connect (mapStateToProps, {}) (QuoteList);
+export default connect(mapStateToProps, {fetchQuote})(QuoteList);
