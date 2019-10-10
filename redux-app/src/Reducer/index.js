@@ -1,6 +1,8 @@
 
 const initialState ={
-    Quotes: [],
+    quotes: [],
+    loading: false,
+    error: ''
 };
 
 const reducer = (state = initialState, action) => {
